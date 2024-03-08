@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../sgela_services/sgela_services.iml" filepath="$PROJECT_DIR$/../../sgela_services/sgela_services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../sgela_shared_widgets/sgela_shared_widgets.iml" filepath="$PROJECT_DIR$/../../sgela_shared_widgets/sgela_shared_widgets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sgela_sponsor_app.iml" filepath="$PROJECT_DIR$/sgela_sponsor_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/sgela_sponsor_app_android.iml" filepath="$PROJECT_DIR$/android/sgela_sponsor_app_android.iml" />
+    </modules>
+  </component>
+</project>
