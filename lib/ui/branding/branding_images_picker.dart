@@ -124,7 +124,7 @@ class BrandingImagesPickerState extends State<BrandingImagesPicker> {
   Widget _getExistingSplash() {
 
     if (_splashFile != null) {
-      Image image = Image.file(_splashFile!);
+      Image image = Image.file(_splashFile!, fit: BoxFit.cover,);
       image.image
           .resolve(const ImageConfiguration())
           .addListener(
@@ -201,20 +201,14 @@ class BrandingImagesPickerState extends State<BrandingImagesPicker> {
                           ),
                           gapH8,
                           Expanded(
-                            child: Card(
-                              child: LayoutBuilder(
-                                builder: (BuildContext context,
-                                    BoxConstraints constraints) {
-                                  containerWidth = constraints.maxWidth;
-                                  containerHeight =
-                                      constraints.maxHeight;
-                                  return SizedBox(
-                                    width: containerWidth,
-                                    height: containerHeight,
-                                    child: _getExistingSplash(),
-                                  );
-                                },
-                              ),
+                            child: LayoutBuilder(
+                              builder: (BuildContext context,
+                                  BoxConstraints constraints) {
+                                containerWidth = constraints.maxWidth;
+                                containerHeight =
+                                    constraints.maxHeight;
+                                return _getExistingSplash();
+                              },
                             ),
                           ),
                           SizedBox(

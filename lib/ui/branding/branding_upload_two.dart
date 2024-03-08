@@ -242,10 +242,10 @@ class _BrandingUploadTwoState extends State<BrandingUploadTwo> {
                   gapH8,
                   TextField(
                     controller: taglineController,
-                    minLines: 2,
-                    maxLines: 3,
+                    minLines: 1,
+                    maxLines: 2,
                     decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
+                        // border: const OutlineInputBorder(),
                         label: Text(
                           'Marketing Tagline',
                           style: myTextStyleSmall(context),
@@ -257,7 +257,7 @@ class _BrandingUploadTwoState extends State<BrandingUploadTwo> {
                     controller: splashUrlController,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
+                        // border: const OutlineInputBorder(),
                         label: Text('Organization Information Link',
                             style: myTextStyleSmall(context)),
                         hintText: 'Enter your organization info link'),
@@ -267,7 +267,7 @@ class _BrandingUploadTwoState extends State<BrandingUploadTwo> {
                     controller: splashTimeController,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
+                        // border: const OutlineInputBorder(),
                         label: Text('Splash time in seconds',
                             style: myTextStyleSmall(context)),
                         hintText:
@@ -344,13 +344,13 @@ class ThumbnailsRemote extends StatelessWidget {
           height: logoHeight == null ? 32 : logoHeight!,
           child: CachedNetworkImage(imageUrl: logoUrl),
         ),
-        gapH8,
+        gapH16,
         SizedBox(
-            height: splashHeight == null ? 240 : splashHeight!,
-            width: 320,
+            height: splashHeight == null ? 160 : splashHeight!,
+            width: 400,
             child: CachedNetworkImage(
               imageUrl: splashUrl,
-              fit: BoxFit.cover,
+              fit: BoxFit.fitHeight,
             )),
       ],
     );
